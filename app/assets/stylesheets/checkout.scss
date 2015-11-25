@@ -1,3 +1,19 @@
 // Place all the styles related to the checkout controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul { 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+#cart {
+  margin: 20px 0;
+  border-top: 1px dotted;
+  border-bottom: 1px dotted;
+}

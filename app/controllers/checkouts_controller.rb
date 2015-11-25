@@ -2,6 +2,8 @@ class CheckoutsController < ApplicationController
   include Wicked::Wizard
   steps :customer, :cart, :review
 
+  before_action :set_products
+
   def show
     @order = Order.find(params[:order_id])
     render_wizard
@@ -24,5 +26,9 @@ class CheckoutsController < ApplicationController
 
   def order_params
     params.require(:order).permit(:company, :name, :address, :sales_rep, :status)
+  end
+
+  def set_products
+    @products = Product.all if step == :cart
   end
 end
