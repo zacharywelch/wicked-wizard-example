@@ -1,0 +1,27 @@
+<%= form_for @order, url: wizard_path do |f| %>
+  <p>
+    <strong>Company:</strong>
+    <%= @order.company %>
+  </p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @order.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @order.address %>
+  </p>
+
+  <p>
+    <strong>Sales rep:</strong>
+    <%= @order.sales_rep %>
+  </p>
+
+  <%= f.hidden_field :status %>  
+  
+  <div class="actions">
+    <%= f.submit "Place order" %>
+  </div>
+<% end %>  
